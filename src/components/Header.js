@@ -1,14 +1,19 @@
-import React from 'react'
+import React from 'react';
 
-function Header() {
+ function Header({isDarkMode,onToggleDarkMode}) {
+  
+const handleToggleDarkModeClick=(e)=>{
+  onToggleDarkMode();
+
+  }
   return (
     <header>
     <h1>
-        $$ BOOK STORE
+         OPEN LIBRARY
         </h1>
         <nav>
 
-        <button>Light Mode</button>
+        <button onClick={handleToggleDarkModeClick}>{isDarkMode? "Light Mode":"Dark Mode"}</button>
         </nav>
     </header>
    
