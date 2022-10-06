@@ -16,9 +16,14 @@ function App() {
     setIsDarkMode(isDarkMode=>!isDarkMode)
 
 const onAddBook =(newBook)=>{
-   setBooks(Book => [...Books,
+   setBooks(Books => [...Books,
     newBook])
 
+  }
+  const loadBooks=()=>{
+    fetch("http://localhost:3000/Books")
+    .then((res)=>res.json())
+    .then((Books)=>setBooks(Books))
   }
   return (
    <div className= {isDarkMode? "App":"App light"}>
@@ -26,8 +31,9 @@ const onAddBook =(newBook)=>{
         <Header isDarkMode={isDarkMode} onToggleDarkMode=
         {onToggleDarkMode}/>
         <BookForm onAddBook={onAddBook}/>
+        <button onClick={loadBooks}>Click Me to Load</button>
 
-        <BookList/>
+        <BookList loadBooks={loadBooks} Books={Books}/>
         
        
    </div>

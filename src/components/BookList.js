@@ -1,7 +1,7 @@
 import {useState} from 'react'
-import Books from "../Books"
+// import Books from "../Books"
 import BookListItem from './BookListItem'
-function BookList() {
+function BookList({Books}) {
 const [searchQuery, setSearchQuery]=useState("");
 
 const handleSearch = (e)=>{
@@ -16,7 +16,7 @@ const searchResults=Books.filter(Book => {
    const renderedBooks=searchResults.map(Book => {
     return <BookListItem key={Books.id} Book={Book}/>
    })
-   console.log("render")
+  
   return (
     <section>
     <h2>Books</h2>

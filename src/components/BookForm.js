@@ -28,14 +28,25 @@ setFormData(formData=>{
 }
 const handleSubmit=(e)=>{
   e.preventDefault();
-  onAddBook(formData);
+fetch("http://localhost:3000/Books",{
+  method:'POST',
+  headers:{
+    'content-Type':'application/json'
+  },
+  body:JSON.stringify(formData)
+})
+.then((response)=>response.json())
+.then((newBook)=>{console.log(newBook)
+  onAddBook(newBook);
+});
   setFormData(initialState)
 }
 
 
   return (
     <div>
-      <form onSubmit={handleSubmit} className='form' autoComplete='off'>
+      <form  className='form' autoComplete='off'
+      onSubmit={handleSubmit} >
       <h3>Add New Book</h3>
       <label htmlFor="tilte">Title</label>
        <input 
@@ -55,14 +66,6 @@ const handleSubmit=(e)=>{
        value={formData.author}
        />
        
-       <lable htmlFor='image'>Image</lable>
-        <input 
-        type="text" 
-        id="image" 
-        name="image"
-        onChange={handleOnChange}
-        value={formData.image}
-        />
 
       <label htmlFor="summary">Summary</label>
        <textarea 
@@ -72,15 +75,6 @@ const handleSubmit=(e)=>{
        value={formData.summary}
        ></textarea>
       
-       <label htmlFor="price">Price</label>
-       <input 
-       type="text" 
-       id="price" 
-       name="price"
-       onChange={handleOnChange}
-       value={formData.price}
-       
-       />
 
        <label htmlFor="category">Category</label>
        <select 
@@ -90,14 +84,34 @@ const handleSubmit=(e)=>{
        value={formData.category}
        >
 
-       <option>Select </option>
-       <option value="1">Non Fiction</option>
-       <option value="1">Comic</option>
-       <option value="1">Thriller</option>
-       <option value="1">Romance</option>
-       <option value="1">Fiction</option>
-       <option value="1">TextBook</option>
+       <option>Select category</option>
+       <option value="Non Fiction">Non Fiction</option>
+       <option value="Comic">Comic</option>
+       <option value="Thiller">Thriller</option>
+       <option value="Romance">Romance</option>
+       <option value="Fiction">Fiction</option>
+       <option value="TextBook">TextBook</option>
        </select>
+
+
+       <lable htmlFor='image'>Image</lable>
+        <input 
+        type="text" 
+        id="image" 
+        name="image"
+        onChange={handleOnChange}
+        value={formData.image}
+        />
+
+        <label htmlFor="price">Price</label>
+       <input 
+       type="text" 
+       id="price" 
+       name="price"
+       onChange={handleOnChange}
+       value={formData.price}
+       
+       />
        
 
         <button type="submit" >Add Book</button>
