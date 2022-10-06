@@ -20,6 +20,12 @@ const onAddBook =(newBook)=>{
     newBook])
 
   }
+    const onDeleteBook= (deletedBookId)=>{
+    setBooks(Books=>Books.filter(Book=>{
+      return Book.id !== deletedBookId
+    }))
+    }
+
 
   
    useEffect(()=>{
@@ -49,6 +55,7 @@ const onAddBook =(newBook)=>{
 
         <BookList 
         Books={Books}
+        onDeleteBook={onDeleteBook}
         setSelectedCategory={setSelectedCategory}
          searchQuery={searchQuery}
          setSearchQuery={setSearchQuery}

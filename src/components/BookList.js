@@ -1,11 +1,17 @@
-import React from 'react'
+import React,{useState, useEffect} from 'react'
 // import Books from "../Books"
 import BookListItem from './BookListItem'
-function BookList({Books, searchQuery, setSearchQuery,setSelectedCategory}) {
+const BookList=({Books,
+   onDeleteBook,
+   searchQuery, 
+  setSearchQuery,
+  setSelectedCategory
+}) =>{
+  const [searchInputText,setSearchInputText]=useState('')
 
 
 const handleSearch = (e)=>{
-   setSearchQuery(e.target.value);
+   setSearchInputText(e.target.value);
   }
 const searchResults=Books.filter(Book => {
   // return true if books should be included and false if not
@@ -16,8 +22,18 @@ const searchResults=Books.filter(Book => {
 //  console.log(searchResults)
 })
    const renderedBooks=searchResults.map(Book => {
-    return <BookListItem key={Books.id} Book={Book}/>
+    return <BookListItem
+     key={Books.id}
+     Book={Book}
+     onDeleteBook={onDeleteBook}
+     />
    })
+   useEffect(()=>{
+    const scheduledUpdate=setTimeout(()=>{
+   setSearchQuery(searchInputText)
+    },300)
+    return()=>{clearTimeout(scheduledUpdate)}
+   },[setSearchQuery, searchInputText])
   
   return (
     <section>

@@ -1,34 +1,45 @@
 import React from 'react'
 
-function BookListItem({Book}) {
-    
+function BookListItem({Book, onDeleteBook}) {
+  const{id,image, title,summary, author,price ,category}=Book  
    
+  
+  const handleDeleteClick= ()=>{
+    fetch(`http://localhost:3000/Books/${id}`,{
+    method:"DELETE"
+   })
+   onDeleteBook(id)
+  }
   return (
     <li>
         <a href="/Books/1">
             <figure className='image'>
-                <img src ={Book.image}
+                <img src ={image}
                 alt="Vrienden voor het leven"/>
-      <button className="claps">👏0 </button>
+     
             </figure>
             </a>
       <section className="details">
-     <h3 style={{color:"MediumSeaGreen"}}>{Book.title}</h3>
+     <h3 style={{color:"MediumSeaGreen"}}>{title}</h3>
      <p>
-     {Book.summary} 
+     {summary} 
      </p>
-     <p style={{color:"MediumSeaGreen"}}>Author: {Book.author}</p>
-     <p>Price {Book.price}</p>
+     <p style={{color:"MediumSeaGreen"}}>Author: {author}</p>
+     <p>Price {price}</p>
      
       </section>
       <footer className='extra'>
         <span className='badge blue'>
-           {Book.category}
+           {category}
         </span>
+        <button onClick={handleDeleteClick}>
+           Delete
+           
+          </button>
       </footer>
 
     </li>
   )
 }
 
-export default BookListItem
+export default BookListItem;

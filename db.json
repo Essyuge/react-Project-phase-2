@@ -19,24 +19,6 @@
       "price": 1750
     },
     {
-      "id": 3,
-      "title": "Rich Dad Poor Dad",
-      "author": "Robert Kiyosaki",
-      "summary": "What The Rich Teaches Their Kids About Money.",
-      "category": "Non-Fiction",
-      "image": "https://covers.openlibrary.org/b/id/8315302-M.jpg",
-      "price": 2400
-    },
-    {
-      "id": 4,
-      "title": "Comic Novel",
-      "author": "Kat Kan",
-      "summary": "Graphic Novel and Comic Books.",
-      "category": "Comic",
-      "image": "https://covers.openlibrary.org/w/id/9319938-M.jpg",
-      "price": 2400
-    },
-    {
       "id": 5,
       "title": "AFRICAN AMERICAN LIVES",
       "author": "ClayBorne Carson",
@@ -53,15 +35,6 @@
       "category": "Thiller",
       "image": "https://covers.openlibrary.org/w/id/8787911-M.jpg",
       "price": 1500
-    },
-    {
-      "id": 7,
-      "title": "HER HAND IN MARRIAGE",
-      "author": "Jessica Steele",
-      "summary": "Love and Romance.",
-      "category": "Romance",
-      "image": "https://covers.openlibrary.org/w/id/2407948-M.jpg",
-      "price": 2400
     },
     {
       "id": "8",
@@ -125,33 +98,6 @@
       "category": "Textbook",
       "image": "https://covers.openlibrary.org/w/id/4522317-M.jpg",
       "price": 3000
-    },
-    {
-      "id": "15",
-      "title": "SILENT SPILL",
-      "author": "Thomas D ",
-      "summary": "The Organization Of An Industrial Crisis",
-      "category": "Textbook",
-      "image": "https://covers.openlibrary.org/w/id/1154404-M.jpg",
-      "price": 2000
-    },
-    {
-      "id": "16",
-      "title": "IMAGINARY DESIRE",
-      "author": "Mary Kelly ",
-      "summary": "romance with your thoughts",
-      "category": "Romance",
-      "image": "https://covers.openlibrary.org/w/id/150120-M.jpg",
-      "price": 2000
-    },
-    {
-      "title": "Pulse Of The HeartLand",
-      "author": "Melinda Cross",
-      "summary": "Emily love story",
-      "price": "150",
-      "image": "https://covers.openlibrary.org/b/id/12915113-L.jpg",
-      "category": "Romance",
-      "id": "0y4dYkI"
     }
   ]
 }
