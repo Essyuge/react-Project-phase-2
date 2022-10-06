@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from './components/Header'
 import BookForm from './components/BookForm'
 import BookList from './components/BookList'
@@ -20,20 +20,20 @@ const onAddBook =(newBook)=>{
     newBook])
 
   }
-  const loadBooks=()=>{
+   useEffect(()=>{
     fetch("http://localhost:3000/Books")
     .then((res)=>res.json())
     .then((Books)=>setBooks(Books))
-  }
+  })
   return (
    <div className= {isDarkMode? "App":"App light"}>
      
         <Header isDarkMode={isDarkMode} onToggleDarkMode=
         {onToggleDarkMode}/>
         <BookForm onAddBook={onAddBook}/>
-        <button onClick={loadBooks}>Click Me to Load</button>
+        {/* <button onClick={loadBooks}>Click Me to Load</button> */}
 
-        <BookList loadBooks={loadBooks} Books={Books}/>
+        <BookList Books={Books}/>
         
        
    </div>
