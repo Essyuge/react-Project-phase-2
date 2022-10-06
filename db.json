@@ -64,15 +64,6 @@
       "price": 3000
     },
     {
-      "id": "11",
-      "title": "ISOMNIA",
-      "author": "Stephen King",
-      "summary": "Isomnia",
-      "category": "Thiller",
-      "image": "https://covers.openlibrary.org/w/id/7886954-M.jpg",
-      "price": 1500
-    },
-    {
       "id": "12",
       "title": "CALCULUS",
       "author": "Robert Ellis",
