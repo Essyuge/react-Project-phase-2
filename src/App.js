@@ -8,8 +8,8 @@ function App() {
 
   const[Books,setBooks]=useState([]);
   const[isDarkMode, setIsDarkMode]=useState(true);
-
-
+const [selectedCategory, setSelectedCategory]=useState("")
+const [searchQuery, setSearchQuery]=useState("");
 
   const onToggleDarkMode =()=>
     // console.log("I was clicked")
@@ -20,20 +20,39 @@ const onAddBook =(newBook)=>{
     newBook])
 
   }
+
+  
    useEffect(()=>{
-    fetch("http://localhost:3000/Books")
+    
+    let url;
+    if (selectedCategory && searchQuery){
+      url=`http://localhost:3000/Books?category=${selectedCategory}&q=${encodeURI(searchQuery)}`
+    }else if(searchQuery){
+      url=`http://localhost:3000/Books?q=${encodeURI(searchQuery)}`
+    }else if(selectedCategory){
+    url=`http://localhost:3000/Books?category=${selectedCategory}`
+    } else {
+      url="http://localhost:3000/Books"
+    }
+    fetch(url)
     .then((res)=>res.json())
     .then((Books)=>setBooks(Books))
-  })
+  },[selectedCategory,searchQuery])
+
   return (
    <div className= {isDarkMode? "App":"App light"}>
      
         <Header isDarkMode={isDarkMode} onToggleDarkMode=
         {onToggleDarkMode}/>
         <BookForm onAddBook={onAddBook}/>
-        {/* <button onClick={loadBooks}>Click Me to Load</button> */}
+       
 
-        <BookList Books={Books}/>
+        <BookList 
+        Books={Books}
+        setSelectedCategory={setSelectedCategory}
+         searchQuery={searchQuery}
+         setSearchQuery={setSearchQuery}
+        />
         
        
    </div>

@@ -1,8 +1,8 @@
-import {useState} from 'react'
+import React from 'react'
 // import Books from "../Books"
 import BookListItem from './BookListItem'
-function BookList({Books}) {
-const [searchQuery, setSearchQuery]=useState("");
+function BookList({Books, searchQuery, setSearchQuery,setSelectedCategory}) {
+
 
 const handleSearch = (e)=>{
    setSearchQuery(e.target.value);
@@ -10,7 +10,9 @@ const handleSearch = (e)=>{
 const searchResults=Books.filter(Book => {
   // return true if books should be included and false if not
   return Book.title.toLowerCase().includes(searchQuery.toLowerCase())||
-         Book.author.toLowerCase().includes(searchQuery.toLowerCase())
+         Book.author.toLowerCase().includes(searchQuery.toLowerCase())||
+         Book.category.toLowerCase().includes(searchQuery.toLowerCase())
+
 //  console.log(searchResults)
 })
    const renderedBooks=searchResults.map(Book => {
@@ -21,12 +23,13 @@ const searchResults=Books.filter(Book => {
     <section>
     <h2>Books</h2>
     <div className='filter'>
-<button>Non-Fiction</button>
-<button>Comic</button>
-<button>Thriller</button>
-<button>Romance</button>
-<button>Fiction</button>
-<button>Textbook</button>
+<button onClick={()=>setSelectedCategory("")}>All</button>
+<button onClick={()=>setSelectedCategory("Non-Fiction")}>Non-Fiction</button>
+<button onClick={()=>setSelectedCategory("Comic")}>Comic</button>
+<button onClick={()=>setSelectedCategory("Thiller")}>Thriller</button>
+<button onClick={()=>setSelectedCategory("Romance")}>Romance</button>
+<button onClick={()=>setSelectedCategory("Fiction")}>Fiction</button>
+<button onClick={()=>setSelectedCategory("TextBook")}>Textbook</button>
 </div>
 
 <input type="text" placeholder="Search..." 
