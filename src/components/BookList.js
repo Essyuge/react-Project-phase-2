@@ -29,7 +29,9 @@ const searchResults=Books.filter(Book => {
 <button>Textbook</button>
 </div>
 
-<input type="text" placeholder="Search..." onChange={handleSearch} />
+<input type="text" placeholder="Search..." 
+onChange={handleSearch}
+ value={searchQuery}/>
 
 <ul className="cards">{renderedBooks}</ul>
     </section>
