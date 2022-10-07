@@ -1,5 +1,4 @@
 import React,{useState, useEffect} from 'react'
-// import Books from "../Books"
 import BookListItem from './BookListItem'
 const BookList=({Books,
    onDeleteBook,
