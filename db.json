@@ -37,15 +37,6 @@
       "price": 2000
     },
     {
-      "id": "9",
-      "title": "THE EYES OF DARKNESS",
-      "author": "Dean Koontz",
-      "summary": "Darkness",
-      "category": "Thriller",
-      "image": "https://covers.openlibrary.org/w/id/12547107-M.jpg",
-      "price": 3000
-    },
-    {
       "id": "10",
       "title": "IT",
       "author": "Stephen King",
@@ -80,6 +71,51 @@
       "category": "Textbook",
       "image": "https://covers.openlibrary.org/w/id/4522317-M.jpg",
       "price": 3000
+    },
+    {
+      "title": "It Ends With Us",
+      "author": "Coolen Hoover",
+      "summary": "Lily hasn’t always had it easy",
+      "price": "2000",
+      "image": "https://covers.openlibrary.org/b/id/10473609-M.jpg",
+      "category": "Romance",
+      "id": "7mIOYxp"
+    },
+    {
+      "title": "Science and controversey",
+      "author": "A. J. Meadows",
+      "summary": "a biography of Sir Norman Lockyer",
+      "price": "4000",
+      "image": "https://covers.openlibrary.org/w/id/8919212-M.jpg",
+      "category": "TextBook",
+      "id": "UIopgoK"
+    },
+    {
+      "title": "The characteristics of parallel algorithms",
+      "author": "Dennis B. Gannon",
+      "summary": "Algorithms",
+      "price": "2000",
+      "image": "https://covers.openlibrary.org/w/id/7161532-M.jpg",
+      "category": "TextBook",
+      "id": "cj6yCMO"
+    },
+    {
+      "title": "Dead or Alive",
+      "author": "Tom Clancy",
+      "summary": "",
+      "price": "2000",
+      "image": "https://covers.openlibrary.org/b/id/6619036-M.jpg?default=%27https://openlibrary.org/images/icons/avatar_book.png%27",
+      "category": "Fiction",
+      "id": "CndIfei"
+    },
+    {
+      "title": "The Passage",
+      "author": "Justin Cronin",
+      "summary": "",
+      "price": "1500",
+      "image": "https://covers.openlibrary.org/w/id/8261369-M.jpg",
+      "category": "Comic",
+      "id": "iwLs_UP"
     }
   ]
 }

@@ -19,12 +19,12 @@ const handleToggleDarkModeClick=(e)=>{
         <NavLink className='button' to ="/books">
           Books
         </NavLink>
-        <NavLink className='button' to ="/books/new">
+        <NavLink  className='button' to ="/books/new">
           Add Books
         </NavLink>
 
 
-        <button onClick={handleToggleDarkModeClick}>{isDarkMode? "Light Mode":"Dark Mode"}</button>
+        <button style={{color: "white"}} onClick={handleToggleDarkModeClick}>{isDarkMode? "Darker Mode":"Lighter Mode"}</button>
         </div>
         </nav>
     </header>

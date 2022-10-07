@@ -20,19 +20,19 @@ function BookListItem({Book, onDeleteBook}) {
             </figure>
             </a>
       <section className="details">
-     <h3 style={{color:"MediumSeaGreen"}}>{title}</h3>
+     <h3 >{title}</h3>
      <p>
      {summary} 
      </p>
-     <p style={{color:"MediumSeaGreen"}}>Author: {author}</p>
+     <p >Author: {author}</p>
      <p>Price {price}</p>
      
       </section>
       <footer className='extra'>
-        <span className='badge blue'>
+        <button style={{color: "darkkhaki"}} >
            {category}
-        </span>
-        <button onClick={handleDeleteClick}>
+        </button>
+        <button style={{color: "darkkhaki"}} onClick={handleDeleteClick}>
            Delete
            
           </button>

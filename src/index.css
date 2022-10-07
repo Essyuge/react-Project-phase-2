@@ -32,20 +32,23 @@
     font-size: 16px;
     color: var(--color);
     background-color: var(--background);
-  
+    
   }
   
   .App {
     color: var(--color);
-    background-color: var(--background);
-
+    /* background-color: var(--background); */
+    background-color: mediumaquamarine;
     min-height: 100vh;
+    
   }
   
   .App.light {
-    --color: var(--black);
-    --background: var(--white);
+  
+    color: darkkhaki;
+    background-color: #00333f;
     --primary: var(--mid-turquoise);
+    
   }
   
   section {

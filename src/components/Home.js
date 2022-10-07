@@ -15,17 +15,17 @@ const Home = () => {
 
   return (
     <section className="box">
-      <h2 style={{ fontSize: "3rem" }}>Keep Track Of Your Favorite Books</h2>
+      <h2 style={{ fontSize: "2rem" }}>Keep Track Of Your Favorite Books</h2>
       <p>
         Organize Your Books Using Their Categories.
       </p>
-      <h3>Recent Books:</h3>
+      <h3 style={{color: "red"}}>Recent Books:</h3>
       {recentBooks.map((Book) => (
         <p key={Book.id}>{Book.title}</p>
       ))}
       <div style={{ margin: "1rem 0" }}>
-        <Link className="button" to="/books">
-          View Books
+        <Link style={{color: "red"}} className="button" to="/books">
+          Click Me to View Books
         </Link>
       </div>
     </section>
