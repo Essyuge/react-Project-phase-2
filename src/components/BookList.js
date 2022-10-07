@@ -18,7 +18,7 @@ const searchResults=Books.filter(Book => {
          Book.author.toLowerCase().includes(searchQuery.toLowerCase())||
          Book.category.toLowerCase().includes(searchQuery.toLowerCase())
 
-//  console.log(searchResults)
+
 })
    const renderedBooks=searchResults.map(Book => {
     return <BookListItem
