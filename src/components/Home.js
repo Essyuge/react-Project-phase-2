@@ -25,7 +25,7 @@ const Home = () => {
       ))}
       <div style={{ margin: "1rem 0" }}>
         <Link className="button" to="/books">
-          View All Books
+          View Books
         </Link>
       </div>
     </section>
