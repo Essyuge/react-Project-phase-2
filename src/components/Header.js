@@ -19,9 +19,9 @@ const handleToggleDarkModeClick=(e)=>{
         <NavLink className='button' to ="/books">
           All Books
         </NavLink>
-        {/* <NavLink className='button' to ="/newbook">
+        <NavLink className='button' to ="/books/new">
           Add Books
-        </NavLink> */}
+        </NavLink>
 
 
         <button onClick={handleToggleDarkModeClick}>{isDarkMode? "Light Mode":"Dark Mode"}</button>
