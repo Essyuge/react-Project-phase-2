@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import BookForm from './BookForm'
 import BookList from './BookList'
-
+import {Switch, Route} from 'react-router-dom'
 function BooksContainer() {
 
     const[Books,setBooks]=useState([]);
@@ -40,9 +40,11 @@ function BooksContainer() {
 
   return (
     <>
-       <BookForm onAddBook={onAddBook}/>
-       
-
+    <Switch>
+       <Route  path ='/books'>
+       <BookForm
+        onAddBook={onAddBook}
+        />
         <BookList 
         Books={Books}
         onDeleteBook={onDeleteBook}
@@ -50,6 +52,12 @@ function BooksContainer() {
          searchQuery={searchQuery}
          setSearchQuery={setSearchQuery}
         />
+        </Route>
+      
+       
+      
+     
+    </Switch>
     </>
   )
 }

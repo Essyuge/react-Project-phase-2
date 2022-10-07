@@ -1,7 +1,13 @@
 import React, { useState} from 'react'
+import {Switch, Route} from 'react-router-dom'
+import Home from './components/Home'
+
+
 import Header from './components/Header'
 import BooksContainer from './components/BooksContainer'
-import Home from './components/Home';
+
+
+
 function App() {
 
   const[isDarkMode, setIsDarkMode]=useState(true);
@@ -15,10 +21,20 @@ function App() {
    <div className= {isDarkMode? "App":"App light"}>
      
         <Header isDarkMode={isDarkMode} onToggleDarkMode=
-        {onToggleDarkMode}/>
-       <Home/>
+        {onToggleDarkMode}
+        />
+       <Switch>
+       <Route exact path="/">
+          <Home />
+        </Route>
+       
+        <Route exact path="/books">
        <BooksContainer/>
-
+       </Route>
+       </Switch>
+       
+       
+     
        
    </div>
       
