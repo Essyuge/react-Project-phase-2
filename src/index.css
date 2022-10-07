@@ -14,8 +14,8 @@
     --purple: #cda2ff;
     --green: #00ef7c;
     --color: var(--white);
-    /* --background: var(--black); */
-    background-color: black;
+    --background: var(--black);
+    /* background-color: black; */
     --primary: var(--turquoise);
     
   }
@@ -31,14 +31,14 @@
     font-family: "Fira Code", monospace;
     font-size: 16px;
     color: var(--color);
-    /* background-color: var(--background); */
-    background-color: black;
+    background-color: var(--background);
+  
   }
   
   .App {
     color: var(--color);
-    /* background-color: var(--background); */
-    background-color: black;
+    background-color: var(--background);
+
     min-height: 100vh;
   }
   
