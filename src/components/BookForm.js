@@ -10,7 +10,6 @@ const initialState ={
   category:""
   }
 
-
 function BookForm({onAddBook}) {
  const [formData, setFormData]=useState(initialState);
 
@@ -28,7 +27,7 @@ setFormData(formData=>{
 }
 const handleSubmit=(e)=>{
   e.preventDefault();
-fetch("http://localhost:3000/Books",{
+fetch("https://rehtse-library.herokuapp.com/books",{
   method:'POST',
   headers:{
     'content-Type':'application/json'
@@ -113,11 +112,9 @@ fetch("http://localhost:3000/Books",{
        
        />
        
-
         <button style={{color: "darkkhaki"}} type="submit" >Add Book</button>
       </form>
         
-
     </div>
   )
 }

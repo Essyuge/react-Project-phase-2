@@ -6,7 +6,7 @@ const Home = () => {
 
   useEffect(() => {
     // fetch the 3 most recently added projects from json-server
-    fetch("http://localhost:3000/Books?_sort=id&_order=desc&_limit=3")
+    fetch("https://rehtse-library.herokuapp.com/books?_sort=id&_order=desc&_limit=3")
       .then((r) => r.json())
       .then((recentBooks) => {
         setRecentBooks(recentBooks);

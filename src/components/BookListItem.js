@@ -5,7 +5,7 @@ function BookListItem({Book, onDeleteBook}) {
    
   
   const handleDeleteClick= ()=>{
-    fetch(`http://localhost:3000/Books/${id}`,{
+    fetch(`https://rehtse-library.herokuapp.com/books/${id}`,{
     method:"DELETE"
    })
    onDeleteBook(id)

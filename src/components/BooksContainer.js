@@ -25,13 +25,13 @@ function BooksContainer() {
     
         let url;
         if (selectedCategory && searchQuery){
-          url=`http://localhost:3000/Books?category=${selectedCategory}&q=${encodeURI(searchQuery)}`
+          url=`https://rehtse-library.herokuapp.com/books?category=${selectedCategory}&q=${encodeURI(searchQuery)}`
         }else if(searchQuery){
-          url=`http://localhost:3000/Books?q=${encodeURI(searchQuery)}`
+          url=`https://rehtse-library.herokuapp.com/books?q=${encodeURI(searchQuery)}`
         }else if(selectedCategory){
-        url=`http://localhost:3000/Books?category=${selectedCategory}`
+        url=`https://rehtse-library.herokuapp.com/books?category=${selectedCategory}`
         } else {
-          url="http://localhost:3000/Books"
+          url="https://rehtse-library.herokuapp.com/books"
         }
         fetch(url)
         .then((res)=>res.json())
