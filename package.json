@@ -35,19 +35,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "description": "## Author",
-  "main": "index.js",
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Essyuge/react-Project-phase-2.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Essyuge/react-Project-phase-2/issues"
-  },
-  "homepage": "https://github.com/Essyuge/react-Project-phase-2#readme"
+  }
+
 }
