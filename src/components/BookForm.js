@@ -10,7 +10,6 @@ const initialState ={
   category:""
   }
 
-
 function BookForm({onAddBook}) {
  const [formData, setFormData]=useState(initialState);
 
@@ -113,11 +112,9 @@ fetch("http://localhost:3000/Books",{
        
        />
        
-
         <button style={{color: "darkkhaki"}} type="submit" >Add Book</button>
       </form>
         
-
     </div>
   )
 }

@@ -125,6 +125,15 @@
       "image": "https://covers.openlibrary.org/w/id/8261369-M.jpg",
       "category": "Comic",
       "id": "iwLs_UP"
+    },
+    {
+      "title": "The characteristics of parallel algorithms",
+      "author": "Dennis B. Gannon",
+      "summary": "Algorithms",
+      "price": "2000",
+      "image": "https://covers.openlibrary.org/w/id/7161532-M.jpg",
+      "category": "TextBook",
+      "id": "cj6yCMO"
     }
   ]
 }
