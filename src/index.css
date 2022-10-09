@@ -37,7 +37,6 @@
   
   .App {
     color: var(--color);
-    /* background-color: var(--background); */
     background-color: mediumaquamarine;
     min-height: 100vh;
     
