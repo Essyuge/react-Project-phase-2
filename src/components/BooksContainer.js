@@ -42,9 +42,7 @@ function BooksContainer() {
     <>
     <Switch>
        <Route  path ='/books'>
-       <BookForm
-        onAddBook={onAddBook}
-        />
+       
         <BookList 
         Books={Books}
         onDeleteBook={onDeleteBook}
@@ -54,11 +52,11 @@ function BooksContainer() {
         />
         </Route>
 
-       {/* <Route path='books/new'>
+      
        <BookForm
         onAddBook={onAddBook}
         />
-       </Route> */}
+       
        
       
      

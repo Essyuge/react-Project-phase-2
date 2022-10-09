@@ -3,6 +3,7 @@ import {Switch, Route} from 'react-router-dom'
 import Home from './components/Home'
 import Header from './components/Header'
 import BooksContainer from './components/BooksContainer'
+import AddForm from './components/AddForm'
 
 function App() {
 
@@ -27,6 +28,10 @@ function App() {
         <Route exact path="/books">
        <BooksContainer/>
        </Route>
+        <Route exact path="/books/new">
+       <AddForm/>
+       </Route>
+
        </Switch>
         
    </div>
