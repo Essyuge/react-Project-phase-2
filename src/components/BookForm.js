@@ -27,7 +27,7 @@ setFormData(formData=>{
 }
 const handleSubmit=(e)=>{
   e.preventDefault();
-fetch("http://localhost:3000/Books",{
+fetch("https://rehtse-library.herokuapp.com/books",{
   method:'POST',
   headers:{
     'content-Type':'application/json'
